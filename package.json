@@ -1,0 +1,26 @@
+{
+  "name": "rest-api-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MacLier/REST-API-practice.git"
+  },
+  "keywords": [
+    "REST",
+    "API"
+  ],
+  "author": "András Viktor Szentviányi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MacLier/REST-API-practice/issues"
+  },
+  "homepage": "https://github.com/MacLier/REST-API-practice#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
