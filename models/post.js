@@ -1,5 +1,5 @@
-const mongoose = require('mongoose';
-const Schrma = mongoose.Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const postSchema = new Schema({
     title: {
@@ -14,7 +14,7 @@ const postSchema = new Schema({
         type: String,
         required: true
     },
-    creater: {
+    creator: {
         type: Object,
         required: true
     },
