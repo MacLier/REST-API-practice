@@ -1,7 +1,8 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 const feedRoutes = require('./routes/feed');
-const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -11,7 +12,13 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Headers', 'Content-type, Authorization');
     next();
 });
-
 app.use(bodyParser.json());
+
 app.use('/feed', feedRoutes);
-app.listen(8080);
+mongoose.connect('mongodb+srv://testadmin:awCWUmGv8Doz6Ph1@parachute.pecmz.mongodb.net/messages?retryWrites=true&w=majority')
+    .then(result => {
+        app.listen(8080);
+    })
+    .catch(err => {
+        console.log(err);
+    })
